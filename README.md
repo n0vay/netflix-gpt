@@ -10,8 +10,9 @@
 - useRef Hook
 - FirBase Setup
 - Deployed Application on Firebase
-- Create SignUp logic
-
+- Create SignUp/SignIn logic
+- Install Redux, Created Store
+- Initialized userSlice
 ...
 
 # Features

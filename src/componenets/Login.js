@@ -1,13 +1,18 @@
 import React, { useRef, useState } from "react";
 import Header from "./Header";
-import { checkLoginData } from "../utils/Validate";
-import { createUserWithEmailAndPassword } from "firebase/auth";
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { checkLoginData } from "../utils/validate";
+import {
+  createUserWithEmailAndPassword,
+  updateProfile,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
 import { auth } from "../utils/firebase";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
   const [errorMessage, setErrorMessage] = useState(null);
+  const navigate = useNavigate();
 
   const email = useRef(null);
   const password = useRef(null);
@@ -32,8 +37,19 @@ const Login = () => {
         .then((userCredential) => {
           // Signed up
           const user = userCredential.user;
-          console.log(user);
-          // ...
+          updateProfile(user, {
+            displayName: name.current.value,
+            photoURL:
+              "https://occ-0-6247-2164.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABdpkabKqQAxyWzo6QW_ZnPz1IZLqlmNfK-t4L1VIeV1DY00JhLo_LMVFp936keDxj-V5UELAVJrU--iUUY2MaDxQSSO-0qw.png?r=e6e",
+          })
+            .then(() => {
+              // Profile updated!
+              // ...
+            })
+            .catch((error) => {
+              // An error occurred
+              // ...
+            });
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -41,6 +57,7 @@ const Login = () => {
           setErrorMessage(errorCode + "-" + errorMessage);
           // ..
         });
+      navigate("/browse");
     } else {
       // Sign In
       signInWithEmailAndPassword(
@@ -59,6 +76,7 @@ const Login = () => {
           const errorMessage = error.message;
           setErrorMessage(errorCode + "-" + errorMessage);
         });
+      navigate("/browse");
     }
   };
 
