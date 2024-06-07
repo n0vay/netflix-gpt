@@ -14,6 +14,8 @@
 - Install Redux, Created Store
 - Initialized userSlice
 - Update Profile
+- BugFixes: Update profile name and fix login navigation
+- Unsub to the onSuthStateChanged callback
 - Fetch from TMDB movies
 ...
 
