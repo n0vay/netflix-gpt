@@ -13,6 +13,8 @@
 - Create SignUp/SignIn logic
 - Install Redux, Created Store
 - Initialized userSlice
+- Update Profile
+- Fetch from TMDB movies
 ...
 
 # Features
