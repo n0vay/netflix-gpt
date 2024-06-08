@@ -22,6 +22,10 @@
 - Create Browse page containing
   - MainContainer -> VideBackground & VideoTitle
   - Secondary Container -> Movielist x (movieCard x n)
+- Custom Hook for fetching video
+- Created state for trailer in movieStore
+- Embedded youtube trailer video to page
+- Used tailwind to style trailer
     ...
 
 # Features
