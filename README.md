@@ -16,8 +16,13 @@
 - Update Profile
 - BugFixes: Update profile name and fix login navigation
 - Unsub to the onSuthStateChanged callback
+- Register TMDB API & create app to get access token
+- Created .env file to store API keys
 - Fetch from TMDB movies
-...
+- Create Browse page containing
+  - MainContainer -> VideBackground & VideoTitle
+  - Secondary Container -> Movielist x (movieCard x n)
+    ...
 
 # Features
 
