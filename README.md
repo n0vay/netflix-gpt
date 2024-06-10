@@ -26,7 +26,10 @@
 - Created state for trailer in movieStore
 - Embedded youtube trailer video to page
 - Used tailwind to style trailer
-    ...
+- Build Secondary Component
+- Built movie list with movie cards
+- Styled browse page components 
+  ...
 
 # Features
 
