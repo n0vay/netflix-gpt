@@ -29,6 +29,8 @@
 - Build Secondary Component
 - Built movie list with movie cards
 - Styled browse page components 
+- Created GPT Search Feature
+- Created Slice for GPT
   ...
 
 # Features

@@ -9,7 +9,7 @@ import {
 import { auth } from "../utils/firebase";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
-import { DEFAULTPROFILEICON } from "../utils/constants";
+import { DEFAULTBACKGROUND, DEFAULTPROFILEICON } from "../utils/constants";
 
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
@@ -90,7 +90,7 @@ const Login = () => {
       <div>
         <img
           className="absolute w-full"
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/dd4dfce3-1a39-4b1a-8e19-b7242da17e68/ebc5214b-a695-4ff0-8772-959861962325/US-en-20240527-popsignuptwoweeks-perspective_alpha_website_large.jpg"
+          src={DEFAULTBACKGROUND}
           alt="background-img"
         />
       </div>
