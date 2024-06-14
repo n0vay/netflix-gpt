@@ -31,6 +31,11 @@
 - Styled browse page components 
 - Created GPT Search Feature
 - Created Slice for GPT
+- GPT search API call
+- Fetched GPT movie suggetions from TBDB
+- Reused Movie list component to show movie suggetions
+- Memoized calls for Main Page
+
   ...
 
 # Features
